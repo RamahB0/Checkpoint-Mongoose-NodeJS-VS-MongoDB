@@ -1,0 +1,14 @@
+{
+  "name": "mongoose-checkpoint",
+  "version": "1.0.0",
+  "description": "Checkpoint: Mongoose & NodeJS VS MongoDB - Person model CRUD exercises",
+  "main": "myApp.js",
+  "scripts": {
+    "start": "node myApp.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1"
+  }
+}
