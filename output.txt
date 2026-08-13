@@ -1,0 +1,172 @@
+
+=== 3. createAndSavePerson ===
+{
+  "_id": "ObjectId(000000000000000000000001)",
+  "name": "John Doe",
+  "age": 26,
+  "favoriteFoods": [
+    "pizza",
+    "sushi"
+  ]
+}
+
+=== 4. createManyPeople ===
+[
+  {
+    "_id": "ObjectId(000000000000000000000002)",
+    "name": "Mary Smith",
+    "age": 45,
+    "favoriteFoods": [
+      "burrito",
+      "salad"
+    ]
+  },
+  {
+    "_id": "ObjectId(000000000000000000000003)",
+    "name": "Mary Smith",
+    "age": 33,
+    "favoriteFoods": [
+      "tacos"
+    ]
+  },
+  {
+    "_id": "ObjectId(000000000000000000000004)",
+    "name": "Akira Laine",
+    "age": 34,
+    "favoriteFoods": [
+      "sushi",
+      "burrito"
+    ]
+  },
+  {
+    "_id": "ObjectId(000000000000000000000005)",
+    "name": "Kim Chen",
+    "age": 51,
+    "favoriteFoods": [
+      "burrito"
+    ]
+  }
+]
+
+=== 5. findPeopleByName("Mary Smith") ===
+[
+  {
+    "_id": "ObjectId(000000000000000000000002)",
+    "name": "Mary Smith",
+    "age": 45,
+    "favoriteFoods": [
+      "burrito",
+      "salad"
+    ]
+  },
+  {
+    "_id": "ObjectId(000000000000000000000003)",
+    "name": "Mary Smith",
+    "age": 33,
+    "favoriteFoods": [
+      "tacos"
+    ]
+  }
+]
+
+=== 6. findOneByFood("sushi") ===
+{
+  "_id": "ObjectId(000000000000000000000001)",
+  "name": "John Doe",
+  "age": 26,
+  "favoriteFoods": [
+    "pizza",
+    "sushi"
+  ]
+}
+
+=== 7. findPersonById(john._id) ===
+{
+  "_id": "ObjectId(000000000000000000000001)",
+  "name": "John Doe",
+  "age": 26,
+  "favoriteFoods": [
+    "pizza",
+    "sushi"
+  ]
+}
+
+=== 8. findEditThenSave -> John after push+save ===
+{
+  "_id": "ObjectId(000000000000000000000001)",
+  "name": "John Doe",
+  "age": 26,
+  "favoriteFoods": [
+    "pizza",
+    "sushi",
+    "hamburger"
+  ]
+}
+
+=== 9. findAndUpdate("Akira Laine") -> age set to 20 ===
+{
+  "_id": "ObjectId(000000000000000000000004)",
+  "name": "Akira Laine",
+  "age": 20,
+  "favoriteFoods": [
+    "sushi",
+    "burrito"
+  ]
+}
+
+=== 10. removeById(john._id) -> removed document ===
+{
+  "_id": "ObjectId(000000000000000000000001)",
+  "name": "John Doe",
+  "age": 26,
+  "favoriteFoods": [
+    "pizza",
+    "sushi",
+    "hamburger"
+  ]
+}
+
+=== 11. removeManyPeople("Mary Smith") ===
+{
+  "deletedCount": 2
+}
+
+=== 12. queryChain(burrito, sort name, limit 2, hide age) ===
+[
+  {
+    "_id": "ObjectId(000000000000000000000004)",
+    "name": "Akira Laine",
+    "favoriteFoods": [
+      "sushi",
+      "burrito"
+    ]
+  },
+  {
+    "_id": "ObjectId(000000000000000000000005)",
+    "name": "Kim Chen",
+    "favoriteFoods": [
+      "burrito"
+    ]
+  }
+]
+
+=== Final people collection ===
+[
+  {
+    "_id": "ObjectId(000000000000000000000004)",
+    "name": "Akira Laine",
+    "age": 20,
+    "favoriteFoods": [
+      "sushi",
+      "burrito"
+    ]
+  },
+  {
+    "_id": "ObjectId(000000000000000000000005)",
+    "name": "Kim Chen",
+    "age": 51,
+    "favoriteFoods": [
+      "burrito"
+    ]
+  }
+]
